@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSafe Service - Professional Painting Solutions</title>
+    <meta name="description" content="Transform your home with HomeSafe Service's professional painting solutions. Quality materials, skilled craftsmen, and guaranteed satisfaction for all your painting needs.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">HomeSafe Service</h1>
+                <nav class="nav desktop-nav">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#process" class="nav-link">Our Process</a>
+                    <a href="#about" class="nav-link">Why Choose Us</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+                <a href="tel:+91-9908127608" class="phone-link desktop-phone">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    +91-9908127608
+                </a>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#services" class="nav-link" onclick="closeMobileMenu()">Services</a>
+                <a href="#process" class="nav-link" onclick="closeMobileMenu()">Our Process</a>
+                <a href="#about" class="nav-link" onclick="closeMobileMenu()">Why Choose Us</a>
+                <a href="#faq" class="nav-link" onclick="closeMobileMenu()">FAQ</a>
+                <a href="tel:+1-800-555-0123" class="phone-link mobile-phone">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    1-800-555-0123
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Professional Home Painting Solutions</h1>
+                    <p>Transform your space with our expert painting services. Quality materials, skilled craftsmen, and guaranteed satisfaction for your home improvement needs.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToBooking()">Get Free Estimate</button>
+                        <button class="btn btn-secondary">View Our Work</button>
+                    </div>
+                </div>
+                <div class="booking-form-container">
+                    <div class="booking-form" id="bookingForm">
+                        <h3>Book Your Free Consultation</h3>
+                        <form id="consultationForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <select id="city" name="city" required>
+                                    <option value="">Select your city</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Karimnagar">Karimnagar</option>
+                                    <option value="Nizamabad">Nizamabad</option>
+                                    <option value="Nalgonda">Nalgonda</option>
+                                    <option value="Suriyapet">Suriyapet</option>
+                                    <option value="Siddipet">Siddipet</option>
+                                    <option value="Warangal">Warangal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Type</label>
+                                <select id="service" name="service">
+                                    <option value="">Select service type</option>
+                                    <option value="interior">Interior Painting</option>
+                                    <option value="exterior">Exterior Painting</option>
+                                    <option value="both">Interior & Exterior</option>
+                                    <option value="commercial">Commercial Painting</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to receive communications from HomeSafe Service regarding my painting project and understand the terms and conditions.</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Schedule Free Consultation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose HomeSafe Service?</h2>
+                <p>We're committed to delivering exceptional painting services with unmatched quality, professionalism, and customer satisfaction.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon">🏆</div>
+                    <h3>Premium Quality Products</h3>
+                    <p>We use only the finest paints and materials from trusted brands, ensuring long-lasting beauty and protection for your home.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">💰</div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden costs or surprises. We provide detailed, upfront pricing with clear breakdowns of all services and materials.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🎨</div>
+                    <h3>Color Consultation</h3>
+                    <p>Our color experts help you choose the perfect palette that complements your style and enhances your space's aesthetic.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">👥</div>
+                    <h3>Skilled Professionals</h3>
+                    <p>Our team consists of licensed, insured, and experienced painters who take pride in delivering exceptional craftsmanship.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">📋</div>
+                    <h3>Project Management</h3>
+                    <p>From start to finish, we manage every aspect of your project with dedicated supervision and regular progress updates.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">⏰</div>
+                    <h3>On-Time Completion</h3>
+                    <p>We respect your time and complete projects within the agreed timeline, minimizing disruption to your daily routine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Services We Offer</h2>
+                <p>Comprehensive painting solutions for residential and commercial properties with expert craftsmanship and attention to detail.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Interior & Exterior Painting">
+                    <div class="service-content">
+                        <h3>Interior & Exterior Painting</h3>
+                        <p>Transform your home's appearance with our comprehensive painting services. From living rooms to facades, we handle all surfaces with precision and care.</p>
+                        <ul>
+                            <li>✓ Wall preparation and priming</li>
+                            <li>✓ Multiple coat application</li>
+                            <li>✓ Trim and detail work</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Quote</button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Special Wall Effects">
+                    <div class="service-content">
+                        <h3>Special Wall Effects</h3>
+                        <p>Add character and sophistication to your spaces with our decorative wall finishes and artistic techniques that create stunning visual impact.</p>
+                        <ul>
+                            <li>✓ Textured finishes</li>
+                            <li>✓ Accent wall designs</li>
+                            <li>✓ Faux painting techniques</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Quote</button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Waterproofing Solutions">
+                    <div class="service-content">
+                        <h3>Waterproofing Solutions</h3>
+                        <p>Protect your property from moisture damage with our advanced waterproofing systems designed to keep your home dry and structurally sound.</p>
+                        <ul>
+                            <li>✓ Basement waterproofing</li>
+                            <li>✓ Exterior wall protection</li>
+                            <li>✓ Roof coating systems</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Quote</button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Wood & Metal Painting">
+                    <div class="service-content">
+                        <h3>Wood & Metal Painting</h3>
+                        <p>Specialized treatments for wooden and metal surfaces that provide both protection and aesthetic enhancement for long-lasting results.</p>
+                        <ul>
+                            <li>✓ Surface preparation & sanding</li>
+                            <li>✓ Rust treatment for metal</li>
+                            <li>✓ Weather-resistant coatings</li>
+                        </ul>
+                        <button class="btn btn-primary">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Painting Process</h2>
+                <p>A systematic approach that ensures quality results and customer satisfaction at every step of your painting project.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Reach out through our website, phone, or email to discuss your painting needs and schedule a consultation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Free Consultation</h3>
+                    <p>Our expert visits your property to assess the work, discuss color options, and provide a detailed estimate.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Project Preparation</h3>
+                    <p>We prepare the work area, protect furniture, and gather all necessary materials and equipment.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Professional Painting</h3>
+                    <p>Our skilled team performs the painting work with regular quality checks and progress updates.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Final Inspection</h3>
+                    <p>We conduct a thorough walkthrough, clean up the work area, and ensure your complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our painting services, process, and policies.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What types of painting services do you offer?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive interior and exterior painting services, including wall painting, trim work, cabinet painting, deck staining, pressure washing, and specialty finishes. We also provide waterproofing and protective coating services.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How much does a typical painting project cost?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Painting costs vary based on project size, paint quality, surface preparation needs, and complexity. We provide detailed, transparent quotes after our free consultation. Typical interior rooms range from $300-800, while full home exteriors can range from $3,000-8,000.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How long does a painting project typically take?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project timelines depend on size and complexity. A single room typically takes 1-2 days, while whole house interiors may take 5-7 days. Exterior painting usually requires 3-5 days for average-sized homes. Weather can affect exterior project timelines.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Do you provide free estimates?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide completely free, no-obligation estimates. Our experts will visit your property, assess the work needed, discuss your preferences, and provide a detailed written quote within 24 hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Are you licensed and insured?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. HomeSafe Service is fully licensed, bonded, and insured. We carry comprehensive liability insurance and workers' compensation coverage to protect both our team and your property during all projects.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What warranty do you offer on your work?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We stand behind our work with a comprehensive warranty. Interior painting comes with a 3-year warranty, while exterior work is warranted for 5 years. This covers paint adhesion, coverage, and workmanship issues under normal conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Get started with your painting project today. Contact us for a free consultation and detailed estimate tailored to your specific needs.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-cta-primary" onclick="scrollToBooking()">Schedule Free Consultation</button>
+                <a href="tel:+1-800-555-0123" class="btn btn-cta-secondary">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    Call Now: +91-9908127608
+                </a>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Service Areas</h3>
+                    <p>Telangana &  Mainly in Hyderabad</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Business Hours</h3>
+                    <p>Mon-Sat: 7AM-6PM<br>Sunday: Emergency Only</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>info@homesafeservice.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HomeSafe Service</h3>
+                    <p>Professional painting services with a commitment to quality, reliability, and customer satisfaction since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Interior Painting</a></li>
+                        <li><a href="#">Exterior Painting</a></li>
+                        <li><a href="#">Commercial Painting</a></li>
+                        <li><a href="#">Waterproofing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>+91-9908127608</li>
+                        <li>info@homesafeservice.com</li>
+                        <li>Emergency: 24/7 Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 HomeSafe Service. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Thank You!</h2>
+            <p>We will contact you soon to schedule your free consultation.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
